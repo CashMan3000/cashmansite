@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>Cashman</title>
+<link rel=preconnect href=https://fonts.googleapis.com>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel=stylesheet>
+<style>body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;user-select:none}body{background:radial-gradient(circle at 50% 120%,rgba(100,200,255,0.3) 0,transparent 60%),linear-gradient(135deg,#0089c4 0,#006eb5 50%,#002d6f 100%);background-size:cover}.win7-window{position:absolute;background-color:rgba(22,38,51,0.65);border:1px solid rgba(0,0,0,0.4);border-top:1px solid rgba(255,255,255,0.3);border-radius:8px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.4),inset 1px 0 0 rgba(255,255,255,0.2),inset -1px 0 0 rgba(255,255,255,0.2),inset 0 0 15px rgba(255,255,255,0.1),0 15px 40px rgba(0,0,0,0.6);backdrop-filter:blur(12px);display:flex;flex-direction:column;z-index:10;padding:0 5px 5px 5px;transition:opacity .2s,transform .2s}.win7-window{width:80vw;height:70vh;top:50%;left:50%;transform:translate(-50%,-50%)}.win7-window.maximized{width:100%!important;height:calc(100% - 40px)!important;top:0!important;left:0!important;transform:none!important;border-radius:0;border:0}.win7-window.minimized{opacity:0;pointer-events:none;transform:translate(-50%,100%) scale(0.5)}.win7-window.minimized:not([style*="transform"]){transform:translate(0,100%) scale(0.5)}.title-bar{height:30px;display:flex;align-items:center;justify-content:space-between;padding:4px 6px 0 6px;cursor:default;user-select:none;margin-bottom:2px;position:relative}.win7-window::before{content:"";position:absolute;top:0;left:0;right:0;height:40%;background:linear-gradient(to bottom,rgba(255,255,255,0.15) 0,rgba(255,255,255,0.05) 100%);border-radius:7px 7px 0 0;pointer-events:none;z-index:0}.title-text{color:black;text-shadow:0 0 10px white,0 0 20px white;font-size:13px;margin-left:5px;z-index:1;font-weight:400}.window-controls{display:flex;gap:2px;z-index:2}.control-btn{width:28px;height:18px;border:1px solid rgba(0,0,0,0.2);border-radius:2px;background:linear-gradient(to bottom,rgba(255,255,255,0.8) 0,rgba(255,255,255,0.5) 45%,rgba(255,255,255,0.2) 50%,rgba(255,255,255,0) 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.7);font-size:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;color:rgba(0,0,0,0.8);font-family:sans-serif;font-weight:bold}.control-btn:hover{box-shadow:inset 0 0 3px rgba(255,255,255,1),0 0 5px rgba(255,255,255,0.6)}.control-btn.min::after{content:"";width:8px;height:2px;background:#333;position:absolute;bottom:4px}.control-btn.max::after{content:"";width:8px;height:6px;border:1px solid #333;border-top-width:2px}.control-btn.close{width:45px;background:linear-gradient(to bottom,#eba39e 0,#e07f79 48%,#d4524c 50%,#d43b33 100%);border-color:#8c2a26;color:white;font-size:14px;font-weight:normal}.control-btn.close:hover{background:linear-gradient(to bottom,#f3b5b1 0,#eb908a 48%,#e0635d 50%,#e04a43 100%);box-shadow:inset 0 1px 0 rgba(255,180,180,0.5),0 0 5px rgba(220,60,50,0.6)}.control-btn.close::after{content:"×"}.window-content{flex:1;background-color:black;border:1px solid #777;box-shadow:inset 0 0 5px rgba(0,0,0,0.8);display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;perspective:800px;position:relative;z-index:1}.spinner{color:white;font-family:"Comic Sans MS","Comic Sans",cursive;font-size:10vw;font-weight:bold;text-align:center;line-height:1;animation:spin 3s linear infinite;user-select:none;margin-bottom:20px}.sc-link{color:#f50;font-family:"Lexend",sans-serif;text-decoration:none;font-size:2rem;transition:transform .2s ease;z-index:10;margin-top:20px;text-shadow:0 0 10px rgba(255,85,0,0.5)}.ig-link{color:#bc2a8d;font-family:"Lexend",sans-serif;text-decoration:none;font-size:2rem;transition:transform .2s ease;z-index:10;margin-top:15px;text-shadow:0 0 10px rgba(188,42,141,0.5)}.sc-link:hover,.ig-link:hover{transform:scale(1.5)}@keyframes spin{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}.taskbar{position:absolute;bottom:0;left:0;width:100%;height:40px;background:linear-gradient(to bottom,rgba(20,30,50,0.9) 0,rgba(10,20,40,0.9) 50%,rgba(0,0,0,0.95) 51%,rgba(0,0,0,0.95) 100%);border-top:1px solid rgba(255,255,255,0.3);box-shadow:inset 0 1px 0 rgba(255,255,255,0.1);backdrop-filter:blur(5px);display:flex;align-items:center;padding:0;z-index:100}.start-button-container{width:50px;height:100%;display:flex;align-items:center;justify-content:center;position:relative;z-index:101}.start-button{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(30,80,110,1) 0,rgba(15,30,50,1) 100%);box-shadow:0 0 2px rgba(0,0,0,0.8),inset 0 0 2px rgba(255,255,255,0.5),inset 0 17px 10px -10px rgba(255,255,255,0.6);border:1px solid rgba(0,0,0,0.6);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:box-shadow .2s}.start-button:hover{background:radial-gradient(circle at 50% 50%,rgba(60,130,170,1) 0,rgba(20,40,60,1) 100%);box-shadow:0 0 10px rgba(0,200,255,0.6),inset 0 0 2px rgba(255,255,255,0.8),inset 0 17px 10px -10px rgba(255,255,255,0.8)}.flag{width:16px;height:16px;position:relative;filter:drop-shadow(0 0 1px rgba(0,0,0,0.5))}.flag div{position:absolute;width:7px;height:7px}.flag .r{background:#f25022;top:0;left:0;border-radius:1px 0 0 0}.flag .g{background:#7fba00;top:0;right:0;border-radius:0 1px 0 0}.flag .b{background:#00a4ef;bottom:0;left:0;border-radius:0 0 0 1px}.flag .y{background:#ffb900;bottom:0;right:0;border-radius:0 0 1px 0}.taskbar-items{flex:1;height:100%;display:flex;align-items:center;padding-left:10px}.task-item{height:34px;width:160px;background:linear-gradient(to bottom,rgba(255,255,255,0.2) 0,rgba(255,255,255,0.1) 100%);border:1px solid rgba(255,255,255,0.3);border-radius:2px;box-shadow:inset 0 0 5px rgba(255,255,255,0.2);display:flex;align-items:center;padding:0 8px;cursor:pointer;margin-right:3px}.task-item:hover{background:linear-gradient(to bottom,rgba(255,255,255,0.4) 0,rgba(255,255,255,0.2) 100%);box-shadow:inset 0 0 10px rgba(255,255,255,0.4)}.task-item.active{background:linear-gradient(to bottom,rgba(255,255,255,0.3) 0,rgba(255,255,255,0.15) 100%);box-shadow:inset 0 0 10px rgba(255,255,255,0.3),0 0 5px rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.5)}.task-icon{width:20px;height:20px;background:#000;border-radius:2px;margin-right:8px;display:flex;align-items:center;justify-content:center;font-size:10px;color:white;font-weight:bold}.task-text{color:white;font-size:12px;text-shadow:0 0 3px rgba(0,0,0,0.8)}.tray-clock{margin-left:auto;color:white;font-size:12px;text-align:center;padding:0 15px;height:100%;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,0.1);border-left:1px solid rgba(255,255,255,0.1);text-shadow:0 0 2px rgba(0,0,0,0.8)}.show-desktop{width:12px;height:100%;background:rgba(255,255,255,0.1);border-left:1px solid rgba(255,255,255,0.2);border-right:1px solid rgba(0,0,0,0.3);cursor:pointer}.show-desktop:hover{background:rgba(255,255,255,0.3);box-shadow:0 0 10px white}.error-popup{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:400px;background:#f0f0f0;border:1px solid #707070;box-shadow:5px 5px 15px rgba(0,0,0,0.5);display:none;flex-direction:column;z-index:9999;font-family:'Segoe UI',sans-serif;border-radius:3px}.error-header{background:white;padding:6px 10px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #dfdfdf}.error-title{font-size:12px;color:#000}.error-close{background:#e81123;color:white;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer;border:1px solid #b00b18}.error-content{padding:20px;display:flex;align-items:center;background:#f0f0f0}.error-icon{width:32px;height:32px;background:red;border-radius:50%;color:white;font-weight:bold;font-size:20px;display:flex;align-items:center;justify-content:center;margin-right:20px;border:2px solid white;box-shadow:0 0 2px rgba(0,0,0,0.5)}.error-message{font-size:13px;color:#333}.error-footer{padding:15px;background:#f0f0f0;display:flex;justify-content:flex-end}.error-btn{padding:4px 20px;border:1px solid #adadad;background:#e1e1e1;font-size:12px;cursor:pointer;box-shadow:inset 0 0 2px white}.error-btn:hover{border-color:#0078d7;background:#e5f1fb}</style>
+</head>
+<body>
+<div class=win7-window id=main-window>
+<div class=title-bar id=title-bar>
+<div style=display:flex;align-items:center>
+<div style="width:16px;height:16px;background:black;margin-right:5px;border-radius:2px;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;font-weight:bold;border:1px solid white">C</div>
+<span class=title-text>Cashman.exe</span>
+</div>
+<div class=window-controls>
+<div class="control-btn min" id=btn-min></div>
+<div class="control-btn max" id=btn-max></div>
+<div class="control-btn close" id=btn-close></div>
+</div>
+</div>
+<div class=window-content>
+<div class=spinner>cashman</div>
+<a href=https://soundcloud.com/cashman3000 target=_blank class=sc-link>soundcloud</a>
+<a href=https://www.instagram.com/cashman.mp3/ target=_blank class=ig-link>instagram</a>
+</div>
+</div>
+<div class=error-popup id=error-popup>
+<div class=error-header>
+<span class=error-title>Cashman.exe - Fatal Error</span>
+<div class=error-close id=error-x>×</div>
+</div>
+<div class=error-content>
+<div class=error-icon>X</div>
+<div class=error-message id=error-msg>why would you even consider that</div>
+</div>
+<div class=error-footer>
+<button class=error-btn id=error-ok>OK</button>
+</div>
+</div>
+<div class=taskbar>
+<div class=start-button-container>
+<div class=start-button>
+<div class=flag>
+<div class=r></div>
+<div class=g></div>
+<div class=b></div>
+<div class=y></div>
+</div>
+</div>
+</div>
+<div class=taskbar-items id=taskbar-items>
+<div class="task-item active" id=taskbar-item-main>
+<div class=task-icon>C</div>
+<span class=task-text>Cashman.exe</span>
+</div>
+</div>
+<div class=tray-clock>
+<div id=clock-time>4:20 PM</div>
+<div id=clock-date>10/24/2025</div>
+</div>
+<div class=show-desktop></div>
+</div>
+<script>const windowEl=document.getElementById('main-window');const titleBar=document.getElementById('title-bar');const minBtn=document.getElementById('btn-min');const maxBtn=document.getElementById('btn-max');const closeBtn=document.getElementById('btn-close');const taskbarItem=document.getElementById('taskbar-item-main');const errorPopup=document.getElementById('error-popup');const errorOk=document.getElementById('error-ok');const errorX=document.getElementById('error-x');const errorMsg=document.getElementById('error-msg');let errorStep=0;let isDragging=false;let isMaximized=false;let dragOffsetX=0;let dragOffsetY=0;let draggedWindow=null;minBtn.addEventListener('click',(e)=>{e.stopPropagation();windowEl.classList.add('minimized');taskbarItem.classList.remove('active');});maxBtn.addEventListener('click',(e)=>{e.stopPropagation();if(isMaximized){windowEl.classList.remove('maximized');isMaximized=false;}else{windowEl.classList.add('maximized');isMaximized=true;}});closeBtn.addEventListener('click',(e)=>{e.stopPropagation();errorStep=0;errorMsg.textContent="why would you even consider that";errorPopup.style.display='flex';});const closeError=()=>{errorPopup.style.display='none';errorStep=0;}
+errorX.addEventListener('click',closeError);errorOk.addEventListener('click',()=>{if(errorStep===0){errorStep=1;errorMsg.textContent="no like seriously";}else if(errorStep===1){errorStep=2;errorMsg.textContent="go follow if your really sorry";setTimeout(()=>{closeError();window.open('https://soundcloud.com/cashman3000','_blank');},5000);}else{closeError();}});taskbarItem.addEventListener('click',()=>{if(windowEl.classList.contains('minimized')){windowEl.classList.remove('minimized');taskbarItem.classList.add('active');}else{windowEl.classList.add('minimized');taskbarItem.classList.remove('active');}});function startDrag(e,win){if(e.target.closest('.control-btn')||win.classList.contains('maximized'))return;isDragging=true;draggedWindow=win;const rect=win.getBoundingClientRect();win.style.left=rect.left+'px';win.style.top=rect.top+'px';win.style.transform='none';dragOffsetX=e.clientX-rect.left;dragOffsetY=e.clientY-rect.top;}
+titleBar.addEventListener('mousedown',(e)=>startDrag(e,windowEl));document.addEventListener('mousemove',(e)=>{if(isDragging&&draggedWindow){draggedWindow.style.left=(e.clientX-dragOffsetX)+'px';draggedWindow.style.top=(e.clientY-dragOffsetY)+'px';}});document.addEventListener('mouseup',()=>{isDragging=false;draggedWindow=null;});function updateClock(){const now=new Date();let hours=now.getHours();const minutes=String(now.getMinutes()).padStart(2,'0');const ampm=hours>=12?'PM':'AM';hours=hours%12;hours=hours?hours:12;document.getElementById('clock-time').textContent=`${hours}:${minutes}${ampm}`;document.getElementById('clock-date').textContent=now.toLocaleDateString();}
+setInterval(updateClock,1000);updateClock();</script>
+</body>
+</html>
